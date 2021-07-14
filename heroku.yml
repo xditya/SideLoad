@@ -1,0 +1,5 @@
+build:
+  docker:
+    ultroid: Dockerfile
+run:
+  ultroid: bash Ultroid/resources/startup/startup.sh
