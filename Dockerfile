@@ -7,8 +7,8 @@ COPY . .
 
 RUN sh run.sh
 
-WORKDIR /root/TeamUltroid
+WORKDIR /root/TeamUltroid/
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-CMD ["bash", "Ultroid/resources/startup/startup.sh"]
+CMD ["bash", "resources/startup/startup.sh"]
