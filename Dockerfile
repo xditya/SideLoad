@@ -5,7 +5,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY . .
 RUN sh run.sh
-COPY Ultroid .
+RUN ls
+COPY ./Ultroid .
 RUN cd Ultroid
 
 CMD ["bash", "resources/startup/startup.sh"]
