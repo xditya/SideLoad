@@ -10,5 +10,3 @@ RUN sh run.sh
 WORKDIR /root/TeamUltroid/
 
 RUN pip3 install --no-cache-dir -r requirements.txt
-
-CMD ["bash", "resources/startup/startup.sh"]
