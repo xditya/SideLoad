@@ -4,6 +4,11 @@ ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY . .
+
 RUN sh run.sh
 
-CMD ["bash", "Ultroid/resources/startup/startup.sh"]
+WORKDIR /root/TeamUltroid/
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+CMD ["bash", "resources/startup/startup.sh"]
