@@ -2,4 +2,4 @@ build:
   docker:
     ultroid: Dockerfile
 run:
-  ultroid: python3 -m pyUltroid
+  ultroid: bash resources/startup/startup.sh
