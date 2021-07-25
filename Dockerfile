@@ -9,4 +9,9 @@ RUN sh run.sh
 
 WORKDIR /root/TeamUltroid/
 
+# install main requirements.
 RUN pip3 install --no-cache-dir -r requirements.txt
+
+# install addons requirements
+RUN wget -O /deploy/addons.txt https://git.io/JWdOk
+RUN pip3 install --no-cache-dir -r /deploy/addons.txt
