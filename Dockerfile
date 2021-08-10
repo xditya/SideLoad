@@ -20,3 +20,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # install addons requirements
 RUN wget https://git.io/JWdOk -O addons.txt
 RUN pip3 install --no-cache-dir -r addons.txt
+
+# remove wheel coz of warning
+RUN rm -rf /usr/local/lib/python3.9/site-packages/.wh
